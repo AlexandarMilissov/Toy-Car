@@ -1,0 +1,38 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${workspaceFolder}/Components/arduino-esp32/cores/esp32",
+                "${workspaceFolder}/Components/arduino-esp32/tools/sdk/esp32/include/**",
+                "${workspaceFolder}/Components/arduino-esp32/tools/sdk/esp32/include/freertos/include",
+                "${workspaceFolder}/Components/arduino-esp32/tools/sdk/esp32/include/freertos/include/esp_additions/freertos",
+                "${workspaceFolder}/Components/arduino-esp32/tools/sdk/esp32/include/esp_common/include",
+                "${workspaceFolder}/Components/arduino-esp32/tools/sdk/esp32/include/freertos/port/xtensa/include",
+                "${workspaceFolder}/Components/arduino-esp32/tools/sdk/esp32/include/xtensa/include",
+                "${workspaceFolder}/Components/arduino-esp32/tools/sdk/esp32/include/xtensa/esp32/include",
+                "${workspaceFolder}/Components/arduino-esp32/tools/sdk/esp32/include/esp_rom/include",
+                "${workspaceFolder}/Components/arduino-esp32/tools/sdk/esp32/include/esp_rom/include/linux",
+                "${workspaceFolder}/Components/arduino-esp32/tools/sdk/esp32/include/newlib/platform_include/**",
+                "${workspaceFolder}/Components/arduino-esp32/tools/sdk/esp32c3/include/newlib/platform_include/**",
+                "${workspaceFolder}/Components/arduino-esp32/tools/sdk/esp32s2/include/newlib/platform_include/**",
+                "${workspaceFolder}/Components/arduino-esp32/tools/sdk/esp32s3/include/newlib/platform_include/**",
+                "${workspaceFolder}/Components/arduino-esp32/variants/AirM2M_CORE_ESP32C3",
+                "C:/Espressif/frameworks/esp-idf-v5.0.1/components/**",
+                "C:/Espressif/frameworks/esp-idf-v5.0.1/components/newlib/platform_include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "windowsSdkVersion": "10.0.22000.0",
+            "compilerPath": "cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-msvc-x64"
+        }
+    ],
+    "version": 4
+}
