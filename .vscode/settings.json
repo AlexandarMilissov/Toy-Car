@@ -1,8 +1,30 @@
 {
     "idf.portWin": "COM3",
+    "idf.adapterTargetName": "esp32",
     "files.associations": {
+        "dcdriver.h": "c",
+        "common.h": "c",
+        "esp_task_wdt.h": "c",
+        "freertos.h": "c",
+        "reent.h": "c",
+        "ps5controller.h": "c",
+        "ps_controller_wrapper.h": "c",
+        "esp32-hal-bt.h": "c",
+        "esp_gap_bt_api.h": "c",
+        "controller_manager.h": "c",
+        "portable.h": "c",
+        "portmacro.h": "c",
+        "esp_newlib.h": "c",
+        "esp_bt_device.h": "c",
+        "bluetoothserial.h": "c",
+        "functional": "c",
+        "random": "c",
+        "esp_spp_api.h": "c",
+        "bluetooth_manager.h": "c",
+        "cstdlib": "c",
+        "initiator.h": "c",
         "esp_bt.h": "c",
-        "esp_bt_main.h": "c"
+        "gpio.h": "c"
     },
-    "idf.adapterTargetName": "esp32"
+    "idf.flashType": "UART"
 }

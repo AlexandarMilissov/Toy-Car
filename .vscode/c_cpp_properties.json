@@ -20,7 +20,12 @@
                 "${workspaceFolder}/Components/arduino-esp32/tools/sdk/esp32s3/include/newlib/platform_include/**",
                 "${workspaceFolder}/Components/arduino-esp32/variants/AirM2M_CORE_ESP32C3",
                 "C:/Espressif/frameworks/esp-idf-v5.0.1/components/**",
-                "C:/Espressif/frameworks/esp-idf-v5.0.1/components/newlib/platform_include"
+                "C:/Espressif/frameworks/esp-idf-v5.0.1/components/newlib/platform_include",
+                "${config:idf.espIdfPath}/components/**",
+                "${config:idf.espIdfPathWin}/components/**",
+                "${workspaceFolder}/Components/ps5-esp32/src",
+                "${workspaceFolder}/Components/Common",
+                "C:/Espressif/frameworks/esp-idf-v5.0.1/components/newlib/platform_include/sys"
             ],
             "defines": [
                 "_DEBUG",
@@ -31,7 +36,8 @@
             "compilerPath": "cl.exe",
             "cStandard": "c17",
             "cppStandard": "c++17",
-            "intelliSenseMode": "windows-msvc-x64"
+            "intelliSenseMode": "windows-msvc-x64",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json"
         }
     ],
     "version": 4
