@@ -4,5 +4,6 @@
 
 void Com_InitFunction(void*);
 void Input_Write_Target_Position(sint8, sint8, uint8);
+void Com_Feedback_Error();
 
 #endif

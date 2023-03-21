@@ -37,25 +37,16 @@ void DCMove(uint8 speed, DCDirection direction)
     {
         gpio_set_level(pin1 ,LOW);
         gpio_set_level(pin2, LOW);
-#ifdef PrintOut
-        printf("Not moving\n");
-#endif
         return;
     }
     else if(FORWARD == direction)
     {
         gpio_set_level(pin1, LOW);
         gpio_set_level(pin2, HIGH);
-#ifdef PrintOut
-        printf("Moving forward at %f %% speed\n", (speed/(float)UINT8_MAX)*100);
-#endif
     }
     else if(BACKWARD == direction)
     {
         gpio_set_level(pin1,HIGH);
         gpio_set_level(pin1,LOW);
-#ifdef PrintOut
-        printf("Moving backward at %f %% speed\n", (speed/(float)UINT8_MAX)*100);
-#endif
     }
 }

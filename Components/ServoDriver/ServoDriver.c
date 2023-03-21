@@ -59,9 +59,6 @@ void ServoMove(uint8 value, ServoDirection dircetion)
     }
 
     angle = Map(angle, MIN_LIB_ANGLE, MAX_LIB_ANGLE, -UINT8_MAX, UINT8_MAX);
-#ifdef PrintOut
-    printf("Rotating at %.2f degrees\n",angle - MAX_LIB_ANGLE);
-#endif
 
     // move the servo
     iot_servo_write_angle(LEDC_LOW_SPEED_MODE, 0, angle);

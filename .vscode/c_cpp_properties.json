@@ -25,7 +25,9 @@
                 "${config:idf.espIdfPathWin}/components/**",
                 "${workspaceFolder}/Components/ps5-esp32/src",
                 "${workspaceFolder}/Components/Common",
-                "C:/Espressif/frameworks/esp-idf-v5.0.1/components/newlib/platform_include/sys"
+                "C:/Espressif/frameworks/esp-idf-v5.0.1/components/newlib/platform_include/sys",
+                "${workspaceFolder}/Components/Logger",
+                "C:/Espressif/frameworks/esp-idf-v5.0.1/components/hal/esp32/include"
             ],
             "defines": [
                 "_DEBUG",

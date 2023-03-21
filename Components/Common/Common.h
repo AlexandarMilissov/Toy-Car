@@ -2,12 +2,15 @@
 #define COMMON_H
 
 #include "esp_task_wdt.h"
-#include "stdint.h"
+#include <stdint.h>
 #include "driver/gpio.h"
 #include "driver/ledc.h"
+#include "freertos/semphr.h"
 
-#define PrintOut
-//#undef PrintOut
+typedef SemaphoreHandle_t Mutex;
+#define CreateMutex xSemaphoreCreateMutex
+#define LockMutex(value) xSemaphoreTake(value,portMAX_DELAY)
+#define UnlockMutex(value) xSemaphoreGive(value)
 
 typedef uint8_t  uint8;
 typedef uint16_t uint16;

@@ -6,6 +6,7 @@
 #include "DriverM.h"
 #include "CT.h"
 #include "Controller_Manager.h"
+#include "Logger.h"
 
 #define CORE_0 0
 #define CORE_1 1
@@ -28,12 +29,14 @@ Init_cfg_struct init_cfg[] =
 {
     {"CT",CT_InitFunction},
     {"Com",Com_InitFunction},
+    {"Com",Log_InitFunction},
     {"DriverM",DriverM_InitFunction}
 };
 #define Init_cfg_size sizeof(init_cfg)/sizeof(Init_cfg_struct)
 Task_cfg_struct task_cfg[] =
 {
     {"Controller_Manager", Controller_Manager_MainFunction, 500, CORE_1, 4096},
+    {"Log_MainFunction", Log_MainFunction, 500, CORE_0, 4096*10},
     {"DriverM",DriverM_MainFunction, 20, CORE_0, 4096},
     {"CT",CT_MainFunction, 100, CORE_0, 4096}
 };

@@ -24,3 +24,8 @@ void Input_Write_Target_Position(sint8 target_position_X, sint8 target_position_
         Write_PointDirectionY(target_position_Y);
     }
 }
+
+void Com_Feedback_Error()
+{
+    Controller_Feedback_Error();
+}

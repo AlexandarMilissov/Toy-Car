@@ -5,5 +5,6 @@
 void Controller_Manager_Init(uint8);
 void Controller_Manager_MainFunction(void*);
 void ControllerCallback(ps5_t, ps5_event_t);
+void Controller_Feedback_Error();
 
 #endif

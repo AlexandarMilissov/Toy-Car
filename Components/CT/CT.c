@@ -1,5 +1,6 @@
 #include "CT.h"
 #include "Common.h"
+#include "Logger.h"
 
 typedef struct Var_Wrapper{
     void* var;
@@ -24,7 +25,7 @@ void CT_MainFunction(void* pvParameters)
         if(false == var_Wrappers[i].isSet)
         {
             var_Wrappers[i].var = 0;
-            printf("CT Reset\n");
+            Log_String(Warning, "Reset " + (i + '0'), __FUNCTION__);
         }
         var_Wrappers[i].isSet = false;
     }

@@ -6,6 +6,8 @@
 #include "Common.h"
 #include "nvs_flash.h"
 
+#include "Logger.h"
+
 void Task(void*);
 
 void MCM_Init(void)
@@ -22,6 +24,9 @@ void MCM_Init(void)
         xTaskCreatePinnedToCore(Task,task_cfg[i].name,task_cfg[i].stack_size,&task_cfg[i],200,NULL,i%2);
     }
     
+    Log_String(Info, "Init complete", __FUNCTION__);
+    TaskSleepMiliSeconds(10000);
+    Log_String(Error, "Simulated error", __FUNCTION__);
 }
 
 void Task(void *pvParameters)

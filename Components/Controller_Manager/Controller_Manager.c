@@ -14,6 +14,18 @@ uint8 id = 0;
 static sint8 posX = 0;
 static sint8 posY = 0;
 
+ps5_cmd_t ControllerFeedBack = 
+{
+  .smallRumble = 0,
+  .largeRumble = 0,
+  .r = 0,
+  .g = 0,
+  .b = 255,
+  .flashOn = 0,
+  .flashOff = 0
+};
+uint8 FlashErrorCounter = 0;
+
 void LeftStick(sint8,sint8);
 
 void Controller_Manager_Init(uint8 _id)
@@ -37,14 +49,29 @@ void Controller_Manager_Init(uint8 _id)
 }
 void Controller_Manager_MainFunction(void * pvParameters)
 {
-    //Input_Write_Target_Position(posX, posY, id);
+    if(!ps5IsConnected())
+    {
+        return;
+    }
+
+
+    if(FlashErrorCounter != 0)
+    {
+        FlashErrorCounter--;
+    }
+    else
+    {
+        ControllerFeedBack.r = 255;
+        ControllerFeedBack.g = 0;
+        ControllerFeedBack.b = 0;
+    }
+    ps5SetOutput(ControllerFeedBack);
+    
 }
 
 void ControllerCallback( ps_t ps, ps_event_t event )
 {
     LeftStick(ps.analog.stick.ly, ps.analog.stick.lx);
-
-
 
     TaskSleepMiliSeconds(1);
 }
@@ -56,6 +83,13 @@ void LeftStick(sint8 x, sint8 y)
         posX = x;
         posY = y;
         Input_Write_Target_Position(posX, posY, id);
-        //printf("L move X:%d Y:%d\n", x, y);
     }
+}
+void Controller_Feedback_Error()
+{
+    ControllerFeedBack.r = 255;
+    ControllerFeedBack.g = 0;
+    ControllerFeedBack.b = 0;
+
+    FlashErrorCounter = 2;
 }

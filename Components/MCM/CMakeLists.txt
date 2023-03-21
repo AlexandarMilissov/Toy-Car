@@ -6,5 +6,6 @@ idf_component_register(SRCS "MCM.c"
                        DriverM
                        esp_timer
                        CT
+                       Logger
                        nvs_flash
                        )

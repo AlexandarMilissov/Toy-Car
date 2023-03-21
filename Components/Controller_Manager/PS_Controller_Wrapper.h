@@ -5,18 +5,21 @@
 #if defined(PS_5)
     #include "ps5.h"
     #define psInit ps5Init
+    #define psIsConnected ps5IsConnected
     #define psSetEventCallback ps5SetEventCallback
     #define ps_t ps5_t
     #define ps_event_t ps5_event_t
 #elif defined(PS_4)
     #include "ps4.h"
     #define psInit ps4Init
+    #define psIsConnected ps4IsConnected
     #define psSetEventCallback ps4SetEventCallback
     #define ps_t ps4_t
     #define ps_event_t ps4_event_t
 #elif defined(PS_3)
     #include "ps3.h"
     #define psInit ps3Init
+    #define psIsConnected ps3IsConnected
     #define psSetEventCallback ps3SetEventCallback
     #define ps_t ps3_t
     #define ps_event_t ps3_event_t

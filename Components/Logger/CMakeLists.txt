@@ -1,7 +1,6 @@
-idf_component_register(SRCS "ServoDriver.c"
+idf_component_register(SRCS "Logger.c"
                        INCLUDE_DIRS "."
                        REQUIRES
                        Common
-                       servo
-                       Logger
+                       Com
                        )
